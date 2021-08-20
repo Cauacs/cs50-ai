@@ -1,0 +1,42 @@
+					Proposition Logic
+
+
+Propositional symbols:
+	Simbolos que representam alguma sentença ou fato
+
+
+Logic symbols:
+
+	¬ = not
+	^ = and
+	v = or
+	-> = implication
+	<-> = biconditional 
+
+
+Model:
+	Cria um possivel "mundo"
+
+	p: Está chovendo
+	q: É segunda feira
+
+	{p = true, q = false}
+
+
+Entailment:
+	
+	alfa |= beta
+
+	alfa = hj é segunda feira de janeiro
+	beta = o mês atual é janeiro
+
+
+Inference:
+	processo de criar sentenças a partir de setenças existentes
+
+
+Model checking:
+	Para determinar se KB |= a:
+		-Enumerar todos os models possiveis
+		-Se em todo model onde KB for true então a tbm é true(kb
+entails a)

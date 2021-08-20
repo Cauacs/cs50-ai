@@ -1,0 +1,68 @@
+##Agent:
+	Uma entidade que percebe e age sobre algum ambiente
+
+##State:
+	A configuração desse ambiente
+
+## Initial State:
+	A configuração inicial do ambiente
+
+## Actions:
+	Ações, escolhas que podem ser tomadas,
+	
+	actions(s) retorna um set de ações que pode ser executada no state s
+
+## Transitional model:
+	Retorna os estados resultados da ação aplicada
+	
+	result(s,a) retorna o estado depois da aplicação da ação a no estado s
+
+## goal test:
+	Teste para determinar se o estado atual é o estado esperado.
+
+## path cost:
+	Algum custo simbolico que o algoritmo levou para chegar até o
+resultado
+
+
+##node:
+	estrutura de dados que guarda os dados:
+		-um state
+		-parente(que gerou esse node)
+		-a ação que foi aplicada para chegar nesse node
+		-o path cost (do início até aqui)
+
+
+##frontier:
+	Lugar onde é guardado nodes resultado de uma expansão
+	expansão = aplicar as ações possiveis em um node e retornar os states
+resultantes dessas ações
+
+
+#Depth First Search(DFS)
+
+	No momento de escolher qual node da frontier será explorado esse
+algoritmo sempre escolherá o ultimo.
+	Stack(last-in first-out)
+
+
+# Breadth First Search(BFS)
+	
+	No momento de escolher qual node da frontiar será explorado esse
+sempre escolherá o primeiro.
+	Queue(First-in first-out)
+
+# greedy best-first search
+	calcular uma função heuristíca baseado no problema a ser resolvido, e
+tomar decisões de acordo.
+
+
+# A* search
+	Toma decisões baseado na função heuristica + o custo (numero de
+passos) de cada estado
+	É o método de search mais otimizado se:
+		-A função heurística nunca superestimar o real valor
+		-A função heurística for consistente h(h)<=h(n')+c (o valor
+heurístico do node sucessor não pode ser maior que o valor heurístico do node
+atual mais o custo de tomar a decisão)
+
